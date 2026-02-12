@@ -36,7 +36,7 @@
   --shadow:0 10px 30px rgba(0,0,0,.08)
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
 img{max-width:100%;display:block}
 a{color:var(--primary);text-decoration:none}
 a:hover{color:var(--primary-d)}
@@ -45,11 +45,14 @@ header{background:var(--header);color:var(--ink-inv);border-bottom:4px solid var
 header .container{padding:26px 0}
 h1{margin:0;font-size:clamp(1.6rem,1.2rem + 1.4vw,2.2rem)}
 .sub{margin:6px 0 0;color:#cfd6e6}
+.soft{color:var(--ink-sub)}
 nav{position:sticky;top:0;z-index:50;background:var(--nav);box-shadow:0 4px 12px rgba(0,0,0,.2)}
-.nav-wrap{width:min(92%,var(--max));margin:auto;display:flex;gap:24px;justify-content:center;align-items:center;padding:12px 0;flex-wrap:wrap}
+.nav-wrap{width:min(92%,var(--max));margin:auto;display:flex;gap:8px;justify-content:center;align-items:center;padding:12px 0;flex-wrap:wrap}
+nav a{color:var(--ink-inv);font-weight:700;padding:6px 10px}
 nav a{color:var(--ink-inv);font-weight:700}
 .hero{margin:26px 0;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,3vw,34px);text-align:center}
-.hero p{color:var(--ink-sub);max-width:900px;margin:10px auto 0}
+.hero h2{font-size:clamp(2.05rem,1.7rem + 2vw,3.1rem);margin:0;line-height:1.12;letter-spacing:.2px}
+.hero p{color:var(--ink-sub);max-width:860px;margin:12px auto 0;font-weight:700;font-size:clamp(1.06rem,1.01rem + .8vw,1.32rem);line-height:1.65;letter-spacing:.1px}
 .hero-media{margin:18px auto 0;display:grid;gap:18px;align-items:stretch;grid-template-columns:repeat(2,minmax(0,1fr))}
 .hero-media .showcase-img{width:100%;height:100%;max-height:520px;object-fit:contain;border-radius:12px;background:#f2f4f7;box-shadow:var(--shadow)}
 .video{margin:0;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
@@ -73,7 +76,6 @@ summary{cursor:pointer;font-weight:700;color:#00a651}
 .service-wrap{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:var(--pad)}
 .sgrid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .sitem{text-align:center}
-.sicon{font-size:2rem;color:var(--primary)}
 .table{overflow-x:auto;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:var(--pad)}
 table{width:100%;border-collapse:collapse}
 th,td{border:1px solid #e8ecf2;padding:12px;text-align:center}
@@ -82,6 +84,35 @@ footer{background:#121317;color:#aab2c0;text-align:center;padding:28px 10px;marg
 footer a{color:#cfd6e6}
 #phone{display:block;font-weight:900;letter-spacing:.2px}
 .fab{position:fixed;right:14px;bottom:14px;background:var(--primary);color:#071221;border:1px solid #0f5a35;border-radius:999px;padding:12px 16px;font-weight:800;box-shadow:0 10px 20px rgba(0,0,0,.18)}
+.featured{margin-top:26px}
+.featured h2{text-align:center;margin:0 0 10px}
+.badge{display:inline-block;background:var(--primary);color:#071221;font-weight:800;font-size:.78rem;padding:4px 8px;border-radius:999px;border:1px solid #0f5a35}
+.card .badge{margin-bottom:6px;align-self:flex-start}
+.tag{display:inline-block;background:#e9f6ef;color:#0f5a35;font-weight:800;font-size:.76rem;padding:4px 8px;border-radius:999px;border:1px solid #bfe6d0}
+.card .tag{margin-bottom:6px;align-self:flex-start}
+.results{margin-top:26px}
+.results h2{text-align:center;margin:0 0 10px}
+.gallery{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.gallery figure{margin:0;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:12px}
+.gallery img{width:100%;height:200px;object-fit:cover;border-radius:10px}
+.gallery figcaption{margin-top:8px;color:var(--ink-sub);font-size:.95rem}
+.chooser{margin-top:26px}
+.chooser h2{text-align:center;margin:0 0 10px}
+.chooser-grid{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.chooser-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:var(--pad)}
+.chooser-card h3{margin:0 0 6px}
+.chooser-card p{margin:0 0 12px;color:var(--ink-sub)}
+.faq{margin-top:26px}
+.faq h2{text-align:center;margin:0 0 10px}
+.faq details{background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:12px 14px;margin-bottom:10px}
+.faq summary{font-weight:800;color:var(--ink)}
+.faq p{margin:8px 0 0;color:var(--ink-sub)}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;background:var(--nav);padding:10px 14px;display:none;justify-content:center;z-index:60;border-top:2px solid var(--primary)}
+.sticky-cta a{background:var(--primary);color:#071221;font-weight:900;padding:10px 16px;border-radius:999px;border:1px solid #0f5a35}
+@media (max-width:900px){
+  .sticky-cta{display:flex}
+  .fab{bottom:64px}
+}
 @media (prefers-reduced-motion:no-preference){
 .fade{opacity:0;transform:translateY(12px);transition:opacity .45s,transform .45s}
 .fade.on{opacity:1;transform:none}
@@ -98,9 +129,10 @@ footer a{color:#cfd6e6}
 
 <nav>
   <div class="nav-wrap">
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="#products">Products</a>
     <a href="#services">Services</a>
+    <a href="resources.html">Free Resources</a>
     <a id="nav-call" href="#contact">Call / Text</a>
   </div>
 </nav>
@@ -110,12 +142,12 @@ footer a{color:#cfd6e6}
     <h2>Get a Mirror-Bright, Durable Nickel Finish</h2>
     <p>Ready-to-use solutions, clear instructions, and fair pricing. Built by a plating manufacturer who actually formulates and tests every batch.</p>
     <div class="hero-media">
-      <img class="showcase-img" src="https://i.postimg.cc/k5YyNrbs/plated.webp" alt="Mirror-bright nickel plating results" loading="lazy" decoding="async">
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/tBIYBbUF4h8?rel=0&modestbranding=1&playsinline=1"
+        <iframe src="https://www.youtube.com/embed/FH5EePWNPs4?rel=0&modestbranding=1&playsinline=1"
                 title="Nickel Plating Demonstration" loading="lazy" allowfullscreen
                 style="width:100%;height:100%;border:0"></iframe>
       </div>
+      <img class="showcase-img" src="https://i.postimg.cc/k5YyNrbs/plated.webp" alt="Mirror-bright nickel plating results" loading="lazy" decoding="async">
     </div>
   </section>
 
@@ -125,6 +157,7 @@ footer a{color:#cfd6e6}
     <div class="grid">
       <article class="card">
         <img src="https://i.ebayimg.com/images/g/8ukAAOSwpkJoAf3a/s-l1600.webp" alt="Nickel plating solution, 1 quart bottle" loading="lazy" decoding="async">
+        <span class="tag">Solution</span>
         <h3>Nickel Plating Solution — 1 Quart</h3>
         <div class="price">$35.00</div>
         <details class="desc"><summary>More details</summary>
@@ -133,10 +166,9 @@ footer a{color:#cfd6e6}
         <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
       </article>
 
-      <!-- Write your comments here -->
-
       <article class="card">
         <img src="https://i.ebayimg.com/images/g/k3EAAOSwV8JoAft7/s-l1600.webp" alt="Nickel electroplating solution, 1 gallon" loading="lazy" decoding="async">
+        <span class="tag">Solution</span>
         <h3>Nickel Electroplating Solution — 1 Gallon</h3>
         <div class="price">$60.00</div>
         <details class="desc"><summary>More details</summary>
@@ -145,10 +177,64 @@ footer a{color:#cfd6e6}
         <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
       </article>
 
-      <!-- Write your comments here -->
+      <article class="card">
+        <img src="https://i.postimg.cc/QNYfW4W5/20250521-022035.jpg" alt="Bright nickel sulfate solution, 1 gallon" loading="lazy" decoding="async">
+        <span class="tag">Solution</span>
+        <h3>Bright Nickel Sulfate — 1 Gallon</h3>
+        <div class="price">$70.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>High-purity nickel source pre-balanced with buffers and wetters for a glossy finish.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
+
+      <article class="card">
+        <img src="https://i.postimg.cc/Qd09fpB9/64.png" alt="Nickel chloride and nickel sulfate electroplating solution, 64 oz" loading="lazy" decoding="async">
+        <span class="tag">Solution</span>
+        <h3>Nickel Chloride & Nickel Sulfate Solution — 64 oz</h3>
+        <div class="price">$50.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>Nickel Watts bath for bright or semi-bright deposits with good corrosion resistance on decorative and engineering parts.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
+
+      <article class="card">
+        <img src="https://i.postimg.cc/rpLNTcvH/2.webp" alt="Nickel plating solution, 16 oz with anode and clips" loading="lazy" decoding="async">
+        <span class="tag">Solution</span>
+        <h3>Nickel Solution 16 oz + Anode & Clips</h3>
+        <div class="price">$40.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>Starter bundle for small parts. Includes solution, pure nickel anode, and alligator clips.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
+
+      <article class="card">
+        <img src="https://i.postimg.cc/SKZb1W6H/electroless.jpg" alt="Electroless nickel solution, 32 oz" loading="lazy" decoding="async">
+        <span class="tag">Electroless</span>
+        <h3>Electroless Nickel — 32 oz</h3>
+        <div class="price">$49.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>Sodium hypophosphite-reduced Ni-P bath. Targets ~190–195 °F, pH 4.6–4.9. Excellent uniformity.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
+
+      <article class="card">
+        <img src="https://i.postimg.cc/7Y6LYv5n/electroless.webp" alt="Electroless nickel solution, 1 gallon" loading="lazy" decoding="async">
+        <span class="tag">Electroless</span>
+        <h3>Electroless Nickel — 1 Gallon</h3>
+        <div class="price">$80.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>Production-size Ni-P bath for uniform, electricity-free plating on complex parts.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
 
       <article class="card">
         <img src="https://i.postimg.cc/Z0kFvGYy/200.webp" alt="Complete plating kit with power supply and nickel anodes" loading="lazy" decoding="async">
+        <span class="tag">Kit</span>
         <h3>Complete Plating Kit (PSU + Anodes)</h3>
         <div class="price">$200.00</div>
         <details class="desc"><summary>More details</summary>
@@ -158,20 +244,8 @@ footer a{color:#cfd6e6}
       </article>
 
       <article class="card">
-        <img src="https://m.media-amazon.com/images/I/71aEYos9nIL._AC_SL1500_.jpg" alt="DC power supply, adjustable 0 to 30V and 0 to 5A" loading="lazy" decoding="async">
-        <h3>DC Power Supply Variable 30V 5A Adjustable</h3>
-        <div class="price">$55.00</div>
-        <details class="desc"><summary>More details</summary>
-          <p>DC regulated lab bench power supply with 4-digit LED display, 18W USB fast charging port, adjustment knob, output switch, and protection functions.</p>
-        </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
-      </article>
-
-      <!-- Write your comments here -->
-
-
-      <article class="card">
         <img src="https://i.ebayimg.com/images/g/qQgAAOSwFkBoHLSx/s-l1600.webp" alt="Brush nickel plating kit, 16 oz" loading="lazy" decoding="async">
+        <span class="tag">Kit</span>
         <h3>Brush Nickel Plating Kit (16 oz)</h3>
         <div class="price">$45.00</div>
         <details class="desc"><summary>More details</summary>
@@ -180,11 +254,42 @@ footer a{color:#cfd6e6}
         <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
       </article>
 
-<!-- Write your comments here -->
+      <article class="card">
+        <img src="https://m.media-amazon.com/images/I/71aEYos9nIL._AC_SL1500_.jpg" alt="DC power supply, adjustable 0 to 30V and 0 to 5A" loading="lazy" decoding="async">
+        <span class="tag">Equipment</span>
+        <h3>DC Power Supply Variable 30V 5A Adjustable</h3>
+        <div class="price">$55.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>DC regulated lab bench power supply with 4-digit LED display, 18W USB fast charging port, adjustment knob, output switch, and protection functions.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
 
+      <article class="card">
+        <img src="https://i.ebayimg.com/images/g/abgAAOSwUGRntFjP/s-l1600.webp" alt="Submersible circulation pump" loading="lazy" decoding="async">
+        <span class="tag">Equipment</span>
+        <h3>Submersible Circulation Pump</h3>
+        <div class="price">$19.99</div>
+        <details class="desc"><summary>More details</summary>
+          <p>Improves throwing power and brightness by keeping ions moving. Quiet operation.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
+
+      <article class="card">
+        <img src="https://i.postimg.cc/TwYjjnc6/41q6-N51-QINL-SX342-SY445-QL70-FMwebp.webp" alt="Titanium submersible heater, 1300 W" loading="lazy" decoding="async">
+        <span class="tag">Equipment</span>
+        <h3>1300 W Titanium Submersible Heater</h3>
+        <div class="price">$50.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>Titanium sheath, fast heat-up for 2–10 gal tanks. Use with GFCI and proper ventilation.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
 
       <article class="card">
         <img src="https://m.media-amazon.com/images/I/61Nq4+m1QxL._SL1500_.jpg" alt="Nickel anode strips, 2x6 inch, 4 pack" loading="lazy" decoding="async">
+        <span class="tag">Anodes</span>
         <h3>Nickel Anode Strips — 2″×6″ (4-pack)</h3>
         <div class="price">$28.00</div>
         <details class="desc"><summary>More details</summary>
@@ -193,10 +298,20 @@ footer a{color:#cfd6e6}
         <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
       </article>
 
- <!-- Write your comments here -->    
+      <article class="card">
+        <img src="https://i.postimg.cc/wT9FMS8c/2lbs.jpg" alt="Pure nickel anodes, 2 pounds" loading="lazy" decoding="async">
+        <span class="tag">Anodes</span>
+        <h3>Pure Nickel Anodes — 2 lbs</h3>
+        <div class="price">$80.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>Square/strip mix for baskets or direct hang. Low impurity content for stable baths.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
 
       <article class="card">
         <img src="https://i.ebayimg.com/images/g/Bv0AAOSwOO9oLahZ/s-l1600.webp" alt="Nickel chloride, 80 grams" loading="lazy" decoding="async">
+        <span class="tag">Additive</span>
         <h3>Nickel Chloride — 80 g</h3>
         <div class="price">$55.00</div>
         <details class="desc"><summary>More details</summary>
@@ -207,6 +322,7 @@ footer a{color:#cfd6e6}
 
       <article class="card">
         <img src="https://i.postimg.cc/L4B1RB0V/brightener.webp" alt="Nickel plating brightener additive" loading="lazy" decoding="async">
+        <span class="tag">Additive</span>
         <h3>Nickel Plating Brightener</h3>
         <div class="price">$29.99</div>
         <details class="desc"><summary>More details</summary>
@@ -215,99 +331,13 @@ footer a{color:#cfd6e6}
         <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
       </article>
 
-      <!-- New  -->
-
-      <article class="card">
-        <img src="https://i.ebayimg.com/images/g/abgAAOSwUGRntFjP/s-l1600.webp" alt="Submersible circulation pump" loading="lazy" decoding="async">
-        <h3>Submersible Circulation Pump</h3>
-        <div class="price">$19.99</div>
-        <details class="desc"><summary>More details</summary>
-          <p>Improves throwing power and brightness by keeping ions moving. Quiet operation.</p>
-        </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
-      </article>
-
-     <!-- Product -->
-
-      <article class="card">
-        <img src="https://i.postimg.cc/SKZb1W6H/electroless.jpg" alt="Electroless nickel solution, 32 oz" loading="lazy" decoding="async">
-        <h3>Electroless Nickel — 32 oz</h3>
-        <div class="price">$49.00</div>
-        <details class="desc"><summary>More details</summary>
-          <p>Sodium hypophosphite-reduced Ni-P bath. Targets ~190–195 °F, pH 4.6–4.9. Excellent uniformity.</p>
-        </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
-      </article>
-
-      <!-- New Product-->
-
-      <article class="card">
-        <img src="https://i.postimg.cc/QNYfW4W5/20250521-022035.jpg" alt="Bright nickel sulfate solution, 1 gallon" loading="lazy" decoding="async">
-        <h3>Bright Nickel Sulfate — 1 Gallon</h3>
-        <div class="price">$70.00</div>
-        <details class="desc"><summary>More details</summary>
-          <p>High-purity nickel source pre-balanced with buffers and wetters for a glossy finish.</p>
-        </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
-      </article>
-
-      <!-- ------Product----------------------  -->
-
-
-      <article class="card">
-        <img src="https://i.postimg.cc/TwYjjnc6/41q6-N51-QINL-SX342-SY445-QL70-FMwebp.webp" alt="Titanium submersible heater, 1300 W" loading="lazy" decoding="async">
-        <h3>1300 W Titanium Submersible Heater</h3>
-        <div class="price">$50.00</div>
-        <details class="desc"><summary>More details</summary>
-          <p>Titanium sheath, fast heat-up for 2–10 gal tanks. Use with GFCI and proper ventilation.</p>
-        </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
-      </article>
-
-<!-- ______Product__________________ -->
-
-      <article class="card">
-        <img src="https://i.postimg.cc/wT9FMS8c/2lbs.jpg" alt="Pure nickel anodes, 2 pounds" loading="lazy" decoding="async">
-        <h3>Pure Nickel Anodes — 2 lbs</h3>
-        <div class="price">$80.00</div>
-        <details class="desc"><summary>More details</summary>
-          <p>Square/strip mix for baskets or direct hang. Low impurity content for stable baths.</p>
-        </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
-      </article>
-
- <!--------- New Product ------->
-
-      <article class="card">
-        <img src="https://i.postimg.cc/7Y6LYv5n/electroless.webp" alt="Electroless nickel solution, 1 gallon" loading="lazy" decoding="async">
-        <h3>Electroless Nickel — 1 Gallon</h3>
-        <div class="price">$80.00</div>
-        <details class="desc"><summary>More details</summary>
-          <p>Production-size Ni-P bath for uniform, electricity-free plating on complex parts.</p>
-        </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
-      </article>
-
-<!--------- New Product ---------->
-
       <article class="card">
         <img src="https://i.postimg.cc/VN8xkKRx/20250508-195250-Copy.jpg" alt="Copper sulfate, 250 grams" loading="lazy" decoding="async">
+        <span class="tag">Chemical</span>
         <h3>Copper Sulfate — 250 g</h3>
         <div class="price">$20.00</div>
         <details class="desc"><summary>More details</summary>
           <p>For copper strike/plate or chemistry prep. Dissolves cleanly; tech-grade crystals.</p>
-        </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
-      </article>
-
-<!-- New Product -->
-
-      <article class="card">
-        <img src="https://i.postimg.cc/rpLNTcvH/2.webp" alt="Nickel plating solution, 16 oz with anode and clips" loading="lazy" decoding="async">
-        <h3>Nickel Solution 16 oz + Anode & Clips</h3>
-        <div class="price">$40.00</div>
-        <details class="desc"><summary>More details</summary>
-          <p>Starter bundle for small parts. Includes solution, pure nickel anode, and alligator clips.</p>
         </details>
         <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
       </article>
@@ -319,35 +349,142 @@ footer a{color:#cfd6e6}
   
   
   
-  
-  
-      <!-- New Product -->
+  <!-- FREE RESOURCES -->
+  <section id="resources" class="fade">
+    <h2>Free Resources</h2>
+    <div class="service-wrap" style="margin-bottom:20px">
+      <p style="text-align:center;max-width:880px;margin:0 auto 8px">
+        New to plating? Start simple: clean well, plate at a steady current, and rinse right after. Small, consistent steps give the best finish.
+      </p>
+      <div class="table">
+        <table>
+          <thead>
+            <tr><th>Problem</th><th>Likely Cause</th><th>Quick Fix</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Dull / gray finish</td><td>Not clean enough or current too low</td><td>Re-clean the part and raise the current a little.</td></tr>
+            <tr><td>Burnt / rough edges</td><td>Current too high</td><td>Lower the current and keep parts farther from the anode.</td></tr>
+            <tr><td>Tiny pits / bubbles</td><td>Oil or air on the surface</td><td>Wash again, pre-wet the part, add gentle agitation.</td></tr>
+            <tr><td>Peeling</td><td>Oxide layer or poor contact</td><td>Lightly scuff, clean again, and plate immediately.</td></tr>
+            <tr><td>Uneven coverage</td><td>Parts not facing the anode</td><td>Rotate the part or reposition anodes for even exposure.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="grid">
       <article class="card">
-        <img src="https://i.postimg.cc/Qd09fpB9/64.png" alt="Nickel chloride and nickel sulfate electroplating solution, 64 oz" loading="lazy" decoding="async">
-        <h3>Nickel Chloride & Nickel Sulfate Solution — 64 oz</h3>
-        <div class="price">$50.00</div>
+        <h3>Prep Is Everything</h3>
+        <p>Clean, degrease, and lightly scuff. Any oil or oxide will dull the finish. Rinse thoroughly before plating.</p>
+      </article>
+      <article class="card">
+        <h3>Dial In Your Current</h3>
+        <p>Start low and increase slowly. Too much current burns the edges; too little looks dull.</p>
+      </article>
+      <article class="card">
+        <h3>Temperature & Agitation</h3>
+        <p>Warm solution and gentle movement improve brightness and coverage. Use a small pump or move the part gently.</p>
+      </article>
+      <article class="card">
+        <h3>Rinse & Protect</h3>
+        <p>Rinse in clean water and dry quickly. A light polish can boost shine without removing much thickness.</p>
+      </article>
+    </div>
+    <p style="text-align:center;margin-top:14px">
+      <a class="btn" href="resources.html">More free resources</a>
+    </p>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="featured fade">
+    <h2>Featured Picks</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="badge">Best Seller</span>
+        <img src="https://i.ebayimg.com/images/g/k3EAAOSwV8JoAft7/s-l1600.webp" alt="Nickel electroplating solution, 1 gallon" loading="lazy" decoding="async">
+        <span class="tag">Solution</span>
+        <h3>Nickel Electroplating Solution — 1 Gallon</h3>
+        <div class="price">$60.00</div>
         <details class="desc"><summary>More details</summary>
-          <p>Nickel Watts bath for bright or semi-bright deposits with good corrosion resistance on decorative and engineering parts.</p>
+          <p>Factory-filtered, pH-tuned solution for consistent coverage on larger parts. Works with pure nickel anodes.</p>
         </details>
         <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
       </article>
+      <article class="card">
+        <span class="badge">Complete Kit</span>
+        <img src="https://i.postimg.cc/Z0kFvGYy/200.webp" alt="Complete plating kit with power supply and nickel anodes" loading="lazy" decoding="async">
+        <span class="tag">Kit</span>
+        <h3>Complete Plating Kit (PSU + Anodes)</h3>
+        <div class="price">$200.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>30 V/10 A supply, pure nickel anodes, cables, and guide. Turnkey setup for small shops and prototyping.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro0" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
+      <article class="card">
+        <span class="badge">Starter</span>
+        <img src="https://i.postimg.cc/rpLNTcvH/2.webp" alt="Nickel plating solution, 16 oz with anode and clips" loading="lazy" decoding="async">
+        <span class="tag">Solution</span>
+        <h3>Nickel Solution 16 oz + Anode & Clips</h3>
+        <div class="price">$40.00</div>
+        <details class="desc"><summary>More details</summary>
+          <p>Starter bundle for small parts. Includes solution, pure nickel anode, and alligator clips.</p>
+        </details>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+      </article>
+    </div>
+  </section>
 
-  
-  
-  
-  
-  
+  <!-- RESULTS -->
+  <section class="results fade">
+    <div class="gallery">
+      <figure>
+        <img src="s-l300 (8).webp" alt="Polished nickel finish on hardware" loading="lazy" decoding="async">
+        <figcaption>Mirror-bright finish on hardware after 20–30 minutes.</figcaption>
+      </figure>
+      <figure>
+        <img src="s-l300 (11).webp" alt="Restoration parts with bright nickel finish" loading="lazy" decoding="async">
+        <figcaption>Restoration parts with a clean, even nickel deposit.</figcaption>
+      </figure>
+      <figure>
+        <img src="s-l300 (15).webp" alt="Small parts plated with nickel solution" loading="lazy" decoding="async">
+        <figcaption>Small parts plated with the 16 oz starter bundle.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CHOOSER -->
+  <section class="chooser fade">
+    <h2>Need Help Choosing?</h2>
+    <div class="chooser-grid">
+      <div class="chooser-card">
+        <h3>Small Parts</h3>
+        <p>Great for fast touch-ups, prototypes, and hardware.</p>
+        <a class="btn" href="#products">Get the 16 oz bundle</a>
+      </div>
+      <div class="chooser-card">
+        <h3>Medium to Large Parts</h3>
+        <p>Consistent coverage for larger batches and bigger pieces.</p>
+        <a class="btn" href="#products">Get the 1 gallon solution</a>
+      </div>
+      <div class="chooser-card">
+        <h3>Full Setup</h3>
+        <p>Everything you need to start plating out of the box.</p>
+        <a class="btn" href="#products">Get the complete kit</a>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section id="services" class="fade">
     <h2>Custom Plating Services</h2>
     <div class="service-wrap">
-      <p class="sub" style="text-align:center;max-width:800px;margin:0 auto 14px">
+      <p class="sub soft" style="text-align:center;max-width:800px;margin:0 auto 14px">
         Industrial components, PC hardware, classic restoration. Quote same day.
       </p>
       <div class="sgrid">
-        <div class="sitem"><div class="sicon">💻</div><h3>PC Mods</h3><p>Blocks, heatsinks, and brackets with a clean, bright Ni finish.</p></div>
-        <div class="sitem"><div class="sicon">⚙️</div><h3>Industrial</h3><p>Wear-resistant coatings for tools and fixtures.</p></div>
-        <div class="sitem"><div class="sicon">🚗</div><h3>Restoration</h3><p>Period-correct bright nickel for trim and hardware.</p></div>
+        <div class="sitem"><h3>PC Mods</h3><p>Blocks, heatsinks, and brackets with a clean, bright Ni finish.</p></div>
+        <div class="sitem"><h3>Industrial</h3><p>Wear-resistant coatings for tools and fixtures.</p></div>
+        <div class="sitem"><h3>Restoration</h3><p>Period-correct bright nickel for trim and hardware.</p></div>
       </div>
       <p style="text-align:center;margin-top:10px">
         <a class="btn" href="mailto:nickelplatingpro@outlook.com?subject=Custom%20Plating%20Quote">Request a Quote</a>
@@ -370,6 +507,27 @@ footer a{color:#cfd6e6}
       </table>
     </div>
   </section>
+
+  <!-- FAQ -->
+  <section class="faq fade">
+    <h2>FAQ</h2>
+    <details>
+      <summary>How fast do orders ship?</summary>
+      <p>Most orders ship out within 1–2 business days. If you need a rush, call or text and we will do our best.</p>
+    </details>
+    <details>
+      <summary>What metals can I plate?</summary>
+      <p>Nickel plates well on steel, copper, brass, and many conductive alloys. Proper cleaning and prep are critical.</p>
+    </details>
+    <details>
+      <summary>Do I need a power supply?</summary>
+      <p>Electroplating solutions require a DC power supply. Electroless nickel does not, but it does require heat.</p>
+    </details>
+    <details>
+      <summary>Can you help me choose?</summary>
+      <p>Yes. Call or text and tell us your part size, metal type, and finish goal.</p>
+    </details>
+  </section>
 </main>
 
 
@@ -378,6 +536,7 @@ footer a{color:#cfd6e6}
  <!-- BREAk -->
 
 <a id="fab" class="fab" href="#contact">Call / Text</a>
+<div class="sticky-cta"><a id="sticky-call" href="#contact">Call / Text</a></div>
 
 <footer>
   <p>Questions? <a href="mailto:nickelplatingpro@outlook.com">nickelplatingpro@outlook.com</a> · <span id="phone-slot">Call / Text</span></p>
@@ -408,6 +567,11 @@ document.addEventListener('DOMContentLoaded',() => {
     fab.textContent=`Call ${display}`;
     fab.href=`tel:+1${tel}`;
   }
+  const sticky=document.getElementById('sticky-call');
+  if(sticky){
+    sticky.textContent=`Call ${display}`;
+    sticky.href=`tel:+1${tel}`;
+  }
   const slot=document.getElementById('phone-slot');
   if(slot){
     const a=document.createElement('a');
@@ -418,3 +582,9 @@ document.addEventListener('DOMContentLoaded',() => {
   }
 });
 </script>
+.trust{margin:18px 0 0}
+.trust .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.trust .card{text-align:center}
+.trust .label{font-weight:800;margin-bottom:4px}
+.icon{width:34px;height:34px;color:var(--primary);margin:0 auto 6px}
+.icon svg{width:34px;height:34px;fill:currentColor}
