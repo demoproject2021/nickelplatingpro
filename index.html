@@ -110,6 +110,11 @@ footer a{color:#cfd6e6}
 .faq details{background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:12px 14px;margin-bottom:10px}
 .faq summary{font-weight:800;color:var(--ink)}
 .faq p{margin:8px 0 0;color:var(--ink-sub)}
+.trust{margin-top:20px}
+.trust-grid{display:grid;gap:12px;grid-template-columns:repeat(4,minmax(0,1fr))}
+.trust-item{background:#0f1d2a;color:#e9eef6;border-radius:12px;padding:14px 12px;text-align:center;border:1px solid rgba(255,255,255,.08)}
+.trust-item strong{display:block;font-size:1.02rem;line-height:1.25}
+.trust-item span{display:block;margin-top:4px;color:#b8c4d8;font-size:.92rem}
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:var(--nav);padding:10px 14px;display:none;justify-content:center;z-index:60;border-top:2px solid var(--primary)}
 .sticky-cta a{background:var(--primary);color:#071221;font-weight:900;padding:10px 16px;border-radius:999px;border:1px solid #0f5a35}
 @media (max-width:900px){
@@ -156,6 +161,7 @@ footer a{color:#cfd6e6}
   section+section{margin-top:26px}
   #products h2,#services h2,#why h2,.featured h2,.chooser h2,.faq h2{font-size:1.42rem}
   .grid,.gallery,.chooser-grid,.sgrid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
   .card img{height:176px}
   .card h3{font-size:1rem}
   .btn{width:100%;text-align:center;padding:12px 14px}
@@ -173,6 +179,7 @@ footer a{color:#cfd6e6}
   .hero p{font-size:.95rem}
   nav a{padding:9px 12px;font-size:.9rem}
   .card img{height:164px}
+  .trust-grid{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:no-preference){
 .fade{opacity:0;transform:translateY(12px);transition:opacity .45s,transform .45s}
@@ -212,6 +219,27 @@ footer a{color:#cfd6e6}
     </div>
   </section>
 
+  <section class="trust fade" aria-label="Trust signals">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <strong>Ships in 1-2 business days</strong>
+        <span>Fast turnaround on most orders</span>
+      </div>
+      <div class="trust-item">
+        <strong>Made and tested in-house</strong>
+        <span>Each batch is filtered and verified</span>
+      </div>
+      <div class="trust-item">
+        <strong>Direct call/text support</strong>
+        <span>Talk to a plating specialist</span>
+      </div>
+      <div class="trust-item">
+        <strong>Trusted by 500+ buyers</strong>
+        <span>Repeat customers across restoration and fab shops</span>
+      </div>
+    </div>
+  </section>
+
   <!-- PRODUCTS -->
   <section id="products" class="fade">
     <h2>Products</h2>
@@ -224,7 +252,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Ready-to-use nickel sulfate/chloride bath with boric acid and brighteners. Targets smooth, bright deposit on steel, copper, brass.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order 1 Quart</a>
       </article>
 
       <article class="card">
@@ -235,7 +263,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Factory-filtered, pH-tuned solution for consistent coverage on larger parts. Works with pure nickel anodes.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order 1 Gallon</a>
       </article>
 
       <article class="card">
@@ -246,7 +274,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>High-purity nickel source pre-balanced with buffers and wetters for a glossy finish.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order Bright Nickel</a>
       </article>
 
       <article class="card">
@@ -257,7 +285,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Nickel Watts bath for bright or semi-bright deposits with good corrosion resistance on decorative and engineering parts.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order 64 oz Mix</a>
       </article>
 
       <article class="card">
@@ -268,7 +296,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Starter bundle for small parts. Includes solution, pure nickel anode, and alligator clips.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Get Starter Bundle</a>
       </article>
 
       <article class="card">
@@ -279,7 +307,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Sodium hypophosphite-reduced Ni-P bath. Targets ~190–195 °F, pH 4.6–4.9. Excellent uniformity.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order 32 oz EN</a>
       </article>
 
       <article class="card">
@@ -290,10 +318,11 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>1-gallon electroless nickel solution for a smooth, corrosion-resistant finish. Coats complex shapes evenly without using electrical current, making it beginner-friendly for small shops and hobby projects.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order 1 Gallon EN</a>
       </article>
 
       <article class="card">
+        <span class="badge">Best Value</span>
         <img src="https://i.postimg.cc/Z0kFvGYy/200.webp" alt="Complete plating kit with power supply and nickel anodes" loading="lazy" decoding="async">
         <span class="tag">Kit</span>
         <h3>Complete Plating Kit (PSU + Anodes)</h3>
@@ -301,7 +330,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>2 gallons of electroplating solution, anodes, and a 30V 10A power supply, plus a step-by-step guide.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro0" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Get Complete Kit</a>
       </article>
 
       <article class="card">
@@ -312,7 +341,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Portable touch-up kit for edges and repairs. Includes solution, swabs, and quick-start card.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Get Brush Kit</a>
       </article>
 
       <article class="card">
@@ -323,7 +352,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Adjustable bench power supply (0-30V, 0-5A) for electroplating and other shop projects. Easy front controls, clear digital display, and built-in safety protection.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Add Power Supply</a>
       </article>
 
       <article class="card">
@@ -334,7 +363,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Improves throwing power and brightness by keeping ions moving. Quiet operation.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Add Circulation Pump</a>
       </article>
 
       <article class="card">
@@ -345,7 +374,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Titanium sheath, fast heat-up for 2–10 gal tanks. Use with GFCI and proper ventilation.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Add Tank Heater</a>
       </article>
 
       <article class="card">
@@ -356,7 +385,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>High-purity nickel for stable dissolution. Best with agitation and 3–5 in spacing from part.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Get 4-Pack Anodes</a>
       </article>
 
       <article class="card">
@@ -367,7 +396,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Square/strip mix for baskets or direct hang. Low impurity content for stable baths.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Get 2 lbs Anodes</a>
       </article>
 
       <article class="card">
@@ -378,7 +407,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Boosts conductivity and anode dissolution. Use for make-up or chloride top-up.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order Nickel Chloride</a>
       </article>
 
       <article class="card">
@@ -389,7 +418,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Adds brightness and leveling to nickel baths for a clearer, more reflective finish.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order Brightener</a>
       </article>
 
       <article class="card">
@@ -400,7 +429,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>For copper strike/plate or chemistry prep. Dissolves cleanly; tech-grade crystals.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order Copper Sulfate</a>
       </article>
     </div>
   </section>
@@ -468,7 +497,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Factory-filtered, pH-tuned solution for consistent coverage on larger parts. Works with pure nickel anodes.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Order 1 Gallon</a>
       </article>
       <article class="card">
         <span class="badge">Complete Kit</span>
@@ -479,7 +508,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>30 V/10 A supply, pure nickel anodes, cables, and guide. Turnkey setup for small shops and prototyping.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro0" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Get Complete Kit</a>
       </article>
       <article class="card">
         <span class="badge">Starter</span>
@@ -490,7 +519,7 @@ footer a{color:#cfd6e6}
         <details class="desc"><summary>More details</summary>
           <p>Starter bundle for small parts. Includes solution, pure nickel anode, and alligator clips.</p>
         </details>
-        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Pay with Venmo</a>
+        <a class="btn" href="https://www.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Get Starter Bundle</a>
       </article>
     </div>
   </section>
