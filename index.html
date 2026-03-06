@@ -15,8 +15,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#00a651">
 <link rel="preconnect" href="https://js.stripe.com" crossorigin>
-<link rel="preconnect" href="https://www.youtube.com">
-<link rel="preconnect" href="https://i.ytimg.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -59,15 +57,16 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav);box-shadow:0 4px 12px
 nav a{color:var(--ink-inv);font-weight:700;padding:8px 12px;border-radius:999px;transition:background-color .2s ease}
 nav a:hover{background:rgba(255,255,255,.1)}
 section[id]{scroll-margin-top:86px}
-.hero{margin:26px 0;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,3vw,34px);text-align:center}
-.hero h2{font-size:clamp(2.05rem,1.7rem + 2vw,3.1rem);margin:0;line-height:1.12;letter-spacing:.2px}
-.hero p{color:var(--ink-sub);max-width:860px;margin:12px auto 0;font-weight:700;font-size:clamp(1.06rem,1.01rem + .8vw,1.32rem);line-height:1.65;letter-spacing:.1px}
-.hero-media{margin:18px auto 0;display:grid;gap:18px;align-items:stretch;grid-template-columns:repeat(2,minmax(0,1fr))}
-.hero-media .showcase-img{width:100%;height:100%;max-height:520px;object-fit:contain;border-radius:12px;background:#f2f4f7;box-shadow:var(--shadow)}
-.video{margin:0;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.hero{margin:26px 0;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,3vw,34px)}
+.hero-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center}
+.hero-copy h2{font-size:clamp(2rem,1.7rem + 1.7vw,2.8rem);margin:0;line-height:1.12;letter-spacing:.2px}
+.hero-copy p{color:var(--ink-sub);margin:12px 0 0;font-weight:700;font-size:clamp(1.01rem,.98rem + .5vw,1.2rem);line-height:1.65;letter-spacing:.1px;max-width:62ch}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.hero .btn{margin-top:0}
+.hero-visual .showcase-img{width:100%;height:auto;max-height:460px;object-fit:cover;border-radius:12px;background:#f2f4f7;box-shadow:var(--shadow)}
 @media (max-width:900px){
-  .hero-media{grid-template-columns:1fr}
-  .hero-media .showcase-img{max-height:420px}
+  .hero-layout{grid-template-columns:1fr}
+  .hero-visual .showcase-img{max-height:360px}
 }
 section+section{margin-top:40px}
 #products h2,#services h2,#why h2{margin:0 0 10px;text-align:center}
@@ -156,10 +155,11 @@ footer a{color:#cfd6e6}
     font-size:.95rem;
   }
   .hero{margin:16px 0 22px;padding:16px 14px}
-  .hero h2{font-size:clamp(1.5rem,5.4vw,1.95rem);line-height:1.18}
-  .hero p{font-size:1rem;line-height:1.5;font-weight:600}
-  .hero-media{gap:12px;margin-top:14px}
-  .hero-media .showcase-img{max-height:300px}
+  .hero-layout{gap:14px}
+  .hero-copy h2{font-size:clamp(1.5rem,5.4vw,1.95rem);line-height:1.18}
+  .hero-copy p{font-size:1rem;line-height:1.5;font-weight:600}
+  .hero-actions{margin-top:14px}
+  .hero-visual .showcase-img{max-height:280px}
   section+section{margin-top:26px}
   #products h2,#services h2,#why h2,.faq h2{font-size:1.42rem}
   .grid,.gallery,.sgrid,.product-catalog .grid{grid-template-columns:1fr}
@@ -213,16 +213,17 @@ footer a{color:#cfd6e6}
 
 <main id="main" class="container">
   <section class="hero fade">
-    <h2>Get a Mirror-Bright, Durable Nickel Finish</h2>
-    <p>Ready-to-use solutions, clear instructions, and fair pricing. Built by a plating manufacturer who actually formulates and tests every batch.</p>
-    <p style="margin-top:14px"><a class="btn" href="#products">Shop Kits</a></p>
-    <div class="hero-media">
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/FH5EePWNPs4?rel=0&modestbranding=1&playsinline=1"
-                title="Nickel Plating Demonstration" loading="lazy" allowfullscreen
-                style="width:100%;height:100%;border:0"></iframe>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <h2>Get a Mirror-Bright, Durable Nickel Finish</h2>
+        <p>Ready-to-use solutions, clear instructions, and fair pricing. Built by a plating manufacturer who actually formulates and tests every batch.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#products">Shop Kits</a>
+        </div>
       </div>
-      <img class="showcase-img" src="https://i.postimg.cc/k5YyNrbs/plated.webp" alt="Mirror-bright nickel plating results" width="640" height="360" width="400" height="210" loading="lazy" decoding="async">
+      <div class="hero-visual">
+        <img class="showcase-img" src="https://i.postimg.cc/k5YyNrbs/plated.webp" alt="Mirror-bright nickel plating results" width="640" height="360" loading="lazy" decoding="async">
+      </div>
     </div>
   </section>
 
