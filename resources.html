@@ -3,246 +3,376 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NickelPlatingPro – Free Resources</title>
-<meta name="description" content="Free nickel plating resources, tips, troubleshooting, and beginner-friendly guides.">
+<title>NickelPlatingPro Resources | DIY Nickel Plating Guides and Troubleshooting</title>
+<meta name="description" content="Learn DIY nickel plating, fix dull nickel plating, understand copper strike before nickel, and compare electroplating with electroless nickel.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://nickelplatingpro.com/resources.html">
-<meta property="og:title" content="NickelPlatingPro – Free Resources">
-<meta property="og:description" content="Free nickel plating tips, troubleshooting, and beginner-friendly guides.">
+<meta property="og:title" content="NickelPlatingPro Resources">
+<meta property="og:description" content="Guides, troubleshooting, and beginner-friendly help for nickel plating kits and solutions.">
 <meta property="og:image" content="https://i.postimg.cc/k5YyNrbs/plated.webp">
 <meta property="og:url" content="https://nickelplatingpro.com/resources.html">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#00a651">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --primary:#00a651;--primary-d:#008f46;--bg:#f7f7f9;--ink:#273043;--ink-sub:#657089;
-  --card:#fff;--ink-inv:#fff;--nav:#1a1a1f;--header:#2b2f36;--radius:14px;--pad:20px;--gap:20px;--max:1200px;
-  --shadow:0 10px 30px rgba(0,0,0,.08)
+  --primary:#00a651;
+  --primary-dark:#008641;
+  --ink:#203045;
+  --ink-soft:#607086;
+  --surface:#fff;
+  --surface-alt:#f4f7fb;
+  --nav:#13181f;
+  --header:#28313d;
+  --border:#dce5ef;
+  --shadow:0 14px 40px rgba(17,26,38,.08);
+  --radius:18px;
+  --max:1100px;
 }
 *{box-sizing:border-box}
-iframe{max-width:100%}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-img{max-width:100%;display:block}
+body{
+  margin:0;
+  font-family:"Manrope",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  line-height:1.6;
+  background:
+    radial-gradient(circle at top left, rgba(0,166,81,.14), transparent 28%),
+    linear-gradient(180deg, #eef4f8 0%, #f7f9fc 260px, #f6f7f9 100%);
+}
+h1,h2,h3{font-family:"Space Grotesk","Manrope",sans-serif}
 a{color:var(--primary);text-decoration:none}
-a:hover{color:var(--primary-d)}
+a:hover{color:var(--primary-dark)}
 .container{width:min(92%,var(--max));margin-inline:auto}
-header{background:var(--header);color:var(--ink-inv);border-bottom:4px solid var(--primary)}
-header .container{padding:26px 0}
-h1{margin:0;font-size:clamp(1.6rem,1.2rem + 1.4vw,2.2rem)}
-.sub{margin:6px 0 0;color:#cfd6e6}
-nav{position:sticky;top:0;z-index:50;background:var(--nav);box-shadow:0 4px 12px rgba(0,0,0,.2)}
-.nav-wrap{width:min(92%,var(--max));margin:auto;display:flex;gap:8px;justify-content:center;align-items:center;padding:12px 0;flex-wrap:wrap}
-nav a{color:var(--ink-inv);font-weight:700;padding:8px 12px;border-radius:999px;transition:background-color .2s ease}
-nav a:hover{background:rgba(255,255,255,.1)}
-section+section{margin-top:40px}
-.grid{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:var(--pad);display:flex;flex-direction:column;gap:8px}
-.card h3{margin:6px 0 4px;font-size:1.05rem}
-.table{overflow-x:auto;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:var(--pad)}
+header{
+  background:var(--header);
+  color:#fff;
+  border-bottom:4px solid var(--primary);
+}
+header .container{padding:22px 0}
+h1{margin:0;font-size:clamp(1.55rem,1.1rem + 1.8vw,2.35rem)}
+.sub{margin:8px 0 0;color:#d5deec}
+nav{
+  position:sticky;
+  top:0;
+  z-index:30;
+  background:rgba(19,24,31,.94);
+  backdrop-filter:blur(10px);
+  box-shadow:0 8px 24px rgba(0,0,0,.15);
+}
+.nav-wrap{
+  width:min(92%,var(--max));
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 0;
+}
+.nav-links{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.nav-links::-webkit-scrollbar{display:none}
+nav a{
+  color:#fff;
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:800;
+  white-space:nowrap;
+}
+.nav-call{
+  background:var(--primary);
+  color:#071221;
+  border:1px solid #0d6338;
+}
+main{padding:18px 0 104px}
+.hero,
+.card,
+.table-wrap,
+.cta{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.hero{padding:22px}
+.hero p{margin:10px 0 0;color:var(--ink-soft);max-width:68ch}
+.grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  margin-top:18px;
+}
+.card{padding:18px}
+.card p{margin:8px 0 0;color:var(--ink-soft)}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:48px;
+  padding:12px 16px;
+  border-radius:14px;
+  background:var(--primary);
+  color:#071221;
+  border:1px solid #0d6338;
+  font-weight:800;
+}
+.btn-alt{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:48px;
+  padding:12px 16px;
+  border-radius:14px;
+  background:#fff;
+  color:var(--ink);
+  border:1px solid var(--border);
+  font-weight:800;
+}
+.section-head{margin:28px 0 12px}
+.section-head h2{margin:0}
+.section-head p{margin:6px 0 0;color:var(--ink-soft)}
+.table-wrap{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:12px;
+}
 table{width:100%;min-width:620px;border-collapse:collapse}
-th,td{border:1px solid #e8ecf2;padding:12px;text-align:left}
+th,td{padding:12px 10px;border:1px solid #e4ebf3;text-align:left}
 th{background:var(--primary);color:#fff}
-.btn{display:inline-block;margin-top:10px;padding:10px 16px;background:var(--primary);color:#071221;font-weight:800;border-radius:12px;border:1px solid #0f5a35;align-self:flex-start}
-footer{background:#121317;color:#aab2c0;text-align:center;padding:28px 10px;margin-top:40px}
-footer a{color:#cfd6e6}
-#phone{display:block;font-weight:900;letter-spacing:.2px}
-.fab{position:fixed;right:14px;bottom:14px;background:var(--primary);color:#071221;border:1px solid #0f5a35;border-radius:999px;padding:12px 16px;font-weight:800;box-shadow:0 10px 20px rgba(0,0,0,.18)}
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;background:var(--nav);padding:10px 14px;display:none;justify-content:center;z-index:60;border-top:2px solid var(--primary)}
-.sticky-cta a{background:var(--primary);color:#071221;font-weight:900;padding:10px 16px;border-radius:999px;border:1px solid #0f5a35}
-@media (max-width:900px){
-  .sticky-cta{display:flex}
-  .fab{bottom:64px}
+.link-grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+.cta{
+  margin-top:28px;
+  padding:20px;
+  display:grid;
+  gap:14px;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+}
+footer{
+  background:#10151b;
+  color:#afbac8;
+  padding:28px 0 104px;
+}
+footer a{color:#d8e1ec}
+.fab{
+  position:fixed;
+  right:12px;
+  bottom:76px;
+  z-index:40;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:12px 16px;
+  border-radius:999px;
+  background:var(--primary);
+  color:#071221;
+  border:1px solid #0d6338;
+  font-weight:900;
+  box-shadow:0 14px 28px rgba(0,0,0,.18);
+}
+.sticky-cta{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:50;
+  display:none;
+  padding:10px 12px;
+  background:rgba(16,21,27,.96);
+  border-top:2px solid var(--primary);
+}
+.sticky-cta a{width:100%;text-align:center}
+@media (max-width:860px){
+  .grid,.link-grid,.cta{grid-template-columns:1fr}
 }
 @media (max-width:760px){
-  :root{--pad:16px;--gap:14px;--radius:12px}
-  body{line-height:1.5}
-  main.container{padding-bottom:102px}
   .container,.nav-wrap{width:min(94%,var(--max))}
-  header .container{padding:20px 0}
-  .sub{font-size:.95rem}
-  .nav-wrap{
-    justify-content:flex-start;
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    padding:10px 0;
-    scrollbar-width:none
-  }
-  .nav-wrap::-webkit-scrollbar{display:none}
-  nav a{
-    flex:0 0 auto;
-    white-space:nowrap;
-    padding:10px 14px;
-    border:1px solid rgba(255,255,255,.16);
-    background:rgba(255,255,255,.05);
-    font-size:.95rem
-  }
-  section+section{margin-top:26px}
-  h2{font-size:1.42rem}
-  .grid{grid-template-columns:1fr}
-  .table{padding:10px;-webkit-overflow-scrolling:touch}
-  th,td{padding:10px 8px;font-size:.92rem}
-  .btn{width:100%;text-align:center}
-  .fab{right:10px;bottom:72px;padding:11px 14px;font-size:.92rem}
-  .sticky-cta{padding:8px 10px}
-  .sticky-cta a{width:100%;text-align:center}
-  footer{padding:24px 10px 102px}
-}
-@media (max-width:420px){
-  h1{font-size:1.45rem}
-  nav a{padding:9px 12px;font-size:.9rem}
-}
-@media (prefers-reduced-motion:no-preference){
-.fade{opacity:0;transform:translateY(12px);transition:opacity .45s,transform .45s}
-.fade.on{opacity:1;transform:none}
+  .nav-wrap{display:grid}
+  .sticky-cta{display:flex}
+  table{min-width:560px}
 }
 </style>
 </head>
 <body>
 <header>
   <div class="container">
-    <h1>NickelPlatingPro LLC</h1>
-    <p class="sub">Free Resources and Beginner-Friendly Tips</p>
+    <h1>Free Resources</h1>
+    <p class="sub">Beginner guidance, troubleshooting, and buying education for nickel plating kits and solutions, including larger-quantity supply for professional shops.</p>
   </div>
 </header>
 
-<nav>
+<nav aria-label="Primary">
   <div class="nav-wrap">
-    <a href="index.html">Home</a>
-    <a href="index.html#products">Products</a>
-    <a href="index.html#services">Services</a>
-    <a href="resources.html">Free Resources</a>
-    <a id="nav-call" href="#contact">Call / Text</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#featured-products">Best Sellers</a>
+      <a href="index.html#all-products">Products</a>
+      <a href="resources.html">Resources</a>
+    </div>
+    <a class="nav-call" id="nav-call" href="#contact">Call / Text</a>
   </div>
 </nav>
 
 <main class="container">
-  <section class="fade">
-    <h2>Free Resources</h2>
-    <p>Everything below is written for first-time platers. Keep it simple, go slow, and you will get a clean, bright finish.</p>
+  <section class="hero">
+    <h2>Start with process clarity, then buy the right chemistry.</h2>
+    <p>Most bad finishes trace back to prep, current density, or part orientation. These guides help you troubleshoot problems faster whether you are plating at home or running repeat work in a professional shop.</p>
   </section>
 
-  <section class="fade">
-    <h2>Quick Start (Beginner-Friendly)</h2>
-    <div class="grid">
+  <section>
+    <div class="section-head">
+      <h2>Core Guides</h2>
+      <p>Start here for plating prep, troubleshooting, and first-time setup help.</p>
+    </div>
+    <div class="link-grid">
       <article class="card">
-        <h3>1. Clean Thoroughly</h3>
-        <p>Wash, degrease, and lightly scuff. Oil and oxide are the #1 cause of bad finishes.</p>
+        <h3>How to Nickel Plate Steel</h3>
+        <p>Prep, current, rinse, and finishing workflow for steel hardware and brackets.</p>
+        <a class="btn-alt" href="how-to-nickel-plate-steel.html">Open guide</a>
       </article>
       <article class="card">
-        <h3>2. Rinse Well</h3>
-        <p>Rinse in clean water before going into the bath. Dirty rinse water can ruin results.</p>
+        <h3>Fix Dull Nickel Plating</h3>
+        <p>Learn how to identify weak prep, low current, contamination, and insufficient agitation.</p>
+        <a class="btn-alt" href="fix-dull-nickel-plating.html">Open guide</a>
       </article>
       <article class="card">
-        <h3>3. Start Low Current</h3>
-        <p>Begin with a low current and increase slowly until the finish becomes bright and even.</p>
+        <h3>Copper Strike Before Nickel</h3>
+        <p>Understand when an acid copper step helps adhesion and appearance before nickel.</p>
+        <a class="btn-alt" href="copper-strike-before-nickel.html">Open guide</a>
       </article>
       <article class="card">
-        <h3>4. Gentle Agitation</h3>
-        <p>Move the part or use a small pump to avoid bubbles and streaks.</p>
+        <h3>Beginner Plating Guide</h3>
+        <p>A simplified first-day path for DIY nickel plating and electroless beginners.</p>
+        <a class="btn-alt" href="beginner-plating-guide.html">Open guide</a>
       </article>
     </div>
   </section>
 
-  <section class="fade">
-    <h2>Common Problems and Fixes</h2>
-    <div class="table">
+  <section>
+    <div class="section-head">
+      <h2>Common Problems and Fixes</h2>
+      <p>Use this table to diagnose issues before replacing chemistry or assuming the part cannot plate.</p>
+    </div>
+    <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>Problem</th><th>Likely Cause</th><th>Quick Fix</th></tr>
+          <tr>
+            <th>Problem</th>
+            <th>Likely Cause</th>
+            <th>Quick Fix</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Dull / gray finish</td><td>Not clean enough or current too low</td><td>Re-clean the part and raise the current a little.</td></tr>
-          <tr><td>Burnt / rough edges</td><td>Current too high</td><td>Lower the current and keep parts farther from the anode.</td></tr>
-          <tr><td>Tiny pits / bubbles</td><td>Oil or air on the surface</td><td>Wash again, pre-wet the part, add gentle agitation.</td></tr>
-          <tr><td>Peeling</td><td>Oxide layer or poor contact</td><td>Lightly scuff, clean again, and plate immediately.</td></tr>
-          <tr><td>Uneven coverage</td><td>Parts not facing the anode</td><td>Rotate the part or reposition anodes for even exposure.</td></tr>
+          <tr>
+            <td>Dull or gray finish</td>
+            <td>Surface contamination, low current, or weak bath activity</td>
+            <td>Re-clean, increase current gradually, and use brightener if needed.</td>
+          </tr>
+          <tr>
+            <td>Burned edges</td>
+            <td>Current density too high</td>
+            <td>Reduce amperage and increase spacing to the anode.</td>
+          </tr>
+          <tr>
+            <td>Peeling nickel</td>
+            <td>Oxide left on steel or poor activation</td>
+            <td>Strip, clean to bare metal, and plate immediately or add a copper strike.</td>
+          </tr>
+          <tr>
+            <td>Uneven coverage</td>
+            <td>Poor orientation or weak agitation</td>
+            <td>Move the part, reposition anodes, and improve circulation.</td>
+          </tr>
+          <tr>
+            <td>Complex part misses recesses</td>
+            <td>Current distribution issue</td>
+            <td>Consider electroless nickel for more uniform deposition.</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="fade">
-    <h2>Safety Basics</h2>
+  <section>
+    <div class="section-head">
+      <h2>First-Time Buyer Checklist</h2>
+      <p>Use this before choosing between a nickel plating kit, copper prep chemistry, or electroless nickel.</p>
+    </div>
     <div class="grid">
       <article class="card">
-        <h3>Ventilation</h3>
-        <p>Work in a well-ventilated area. Avoid breathing mists or fumes.</p>
+        <h3>Know Your Base Metal</h3>
+        <p>Steel, copper, brass, and repaired parts can need different prep steps before nickel will adhere correctly.</p>
       </article>
       <article class="card">
-        <h3>Gloves and Eye Protection</h3>
-        <p>Use chemical-resistant gloves and safety glasses at minimum.</p>
+        <h3>Estimate Part Size</h3>
+        <p>Part size affects current needs, chemistry volume, and whether a starter setup or larger kit makes more sense.</p>
       </article>
       <article class="card">
-        <h3>Label and Store</h3>
-        <p>Keep solutions sealed, labeled, and away from heat or sunlight.</p>
+        <h3>Decide on Appearance vs Coverage</h3>
+        <p>Bright nickel is ideal for cosmetic shine, while electroless nickel often wins on recessed geometry and uniformity.</p>
       </article>
       <article class="card">
-        <h3>Rinse Water</h3>
-        <p>Collect and dispose of rinse water responsibly. Do not pour down drains.</p>
+        <h3>Plan for Adhesion</h3>
+        <p>If steel parts peel or plate unevenly, read the copper strike guide before blaming the bath.</p>
       </article>
     </div>
   </section>
 
-  <section class="fade">
-    <h2>Electroplating vs Electroless</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Electroplating</h3>
-        <p>Requires a DC power supply. Faster and lower cost per gallon.</p>
-      </article>
-      <article class="card">
-        <h3>Electroless</h3>
-        <p>No electricity, but requires heat and strict temperature control.</p>
-      </article>
+  <section class="cta">
+    <div>
+      <h2>Ready to buy chemistry or compare kits?</h2>
+      <p>Return to the main storefront to shop current products, compare kit options, or contact us about larger-quantity supply for shop use.</p>
     </div>
-    <a class="btn" href="index.html#products">Shop Products</a>
+    <a class="btn" href="index.html#featured-products">Shop Products</a>
   </section>
 </main>
 
 <a id="fab" class="fab" href="#contact">Call / Text</a>
-<div class="sticky-cta"><a id="sticky-call" href="#contact">Call / Text</a></div>
+<div class="sticky-cta"><a class="btn" id="sticky-call" href="#contact">Call / Text</a></div>
 
-<footer>
-  <p>Questions? <a href="mailto:nickelplatingpro@outlook.com">nickelplatingpro@outlook.com</a> · <span id="phone-slot">Call / Text</span></p>
-  <p>© 2026 NickelPlatingPro. All rights reserved.</p>
+<footer id="contact">
+  <div class="container">
+    <p>Questions? <a href="mailto:nickelplatingpro@outlook.com">nickelplatingpro@outlook.com</a> · <span id="phone-slot">Call / Text</span></p>
+    <p>© 2026 NickelPlatingPro. All rights reserved.</p>
+  </div>
 </footer>
 
 <script>
-document.addEventListener('DOMContentLoaded',() => {
-  const els=[...document.querySelectorAll('.fade')];
-  const io=new IntersectionObserver(es => es.forEach(e => {
-    if(e.isIntersecting){
-      e.target.classList.add('on');
-      io.unobserve(e.target);
-    }
-  }),{threshold:.15});
-  els.forEach(el => io.observe(el));
-  const parts=['337','550','4807'];
-  const display=`(${parts[0]}) ${parts[1]}-${parts[2]}`;
-  const tel=parts.join('');
-  const nav=document.getElementById('nav-call');
-  if(nav){
-    nav.textContent=`Call ${display}`;
-    nav.href=`tel:+1${tel}`;
+document.addEventListener('DOMContentLoaded', () => {
+  const parts = ['337', '550', '4807'];
+  const display = `(${parts[0]}) ${parts[1]}-${parts[2]}`;
+  const tel = parts.join('');
+  const nav = document.getElementById('nav-call');
+  const fab = document.getElementById('fab');
+  const sticky = document.getElementById('sticky-call');
+  const slot = document.getElementById('phone-slot');
+
+  if (nav) {
+    nav.textContent = `Call ${display}`;
+    nav.href = `tel:+1${tel}`;
   }
-  const fab=document.getElementById('fab');
-  if(fab){
-    fab.textContent=`Call ${display}`;
-    fab.href=`tel:+1${tel}`;
+  if (fab) {
+    fab.textContent = `Call ${display}`;
+    fab.href = `tel:+1${tel}`;
   }
-  const sticky=document.getElementById('sticky-call');
-  if(sticky){
-    sticky.textContent=`Call ${display}`;
-    sticky.href=`tel:+1${tel}`;
+  if (sticky) {
+    sticky.textContent = `Call ${display}`;
+    sticky.href = `tel:+1${tel}`;
   }
-  const slot=document.getElementById('phone-slot');
-  if(slot){
-    const a=document.createElement('a');
-    a.href=`tel:+1${tel}`;
-    a.textContent=display;
-    slot.textContent='';
+  if (slot) {
+    const a = document.createElement('a');
+    a.href = `tel:+1${tel}`;
+    a.textContent = display;
+    slot.textContent = '';
     slot.appendChild(a);
   }
 });
