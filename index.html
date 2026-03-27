@@ -261,6 +261,14 @@ nav a:hover{background:rgba(255,255,255,.09)}
   gap:12px;
   margin-top:20px;
 }
+.mobile-featured{display:none}
+.mobile-featured .section-head{margin-bottom:12px}
+.mobile-featured .section-head h2{font-size:1.2rem}
+.mobile-featured .section-head p{font-size:.94rem}
+.mobile-featured .card{gap:8px}
+.mobile-featured .card img{aspect-ratio:16/10}
+.mobile-featured .card h3{font-size:1.02rem}
+.mobile-featured .price{font-size:1.6rem}
 .btn,.btn-alt{
   display:inline-flex;
   justify-content:center;
@@ -561,30 +569,78 @@ footer a{color:#d8e1ec}
 }
 @media (max-width:760px){
   :root{
-    --pad:16px;
-    --gap:14px;
-    --radius:14px;
+    --pad:12px;
+    --gap:10px;
+    --radius:12px;
   }
-  body{line-height:1.5}
+  body{line-height:1.45}
   main{padding-bottom:104px}
   .container,.nav-wrap{width:min(94%,var(--max))}
-  .brand-row,
   .section-head,
   .footer-grid{
     grid-template-columns:1fr;
     display:grid;
   }
-  .mini-proof{justify-content:flex-start}
-  .nav-wrap{
-    display:grid;
+  header .container{padding:10px 0}
+  .brand-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
     gap:10px;
   }
+  .brand-copy h1{font-size:1.18rem}
+  .sub{display:none}
+  .mini-proof{display:none}
+  .nav-wrap{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 0;
+  }
   .nav-links{
-    padding-bottom:2px;
+    gap:6px;
+    flex:1;
+    padding-bottom:0;
+  }
+  nav a{
+    padding:8px 10px;
+    font-size:.82rem;
+  }
+  .nav-links a:nth-child(n+4){display:none}
+  .nav-cta{
+    flex:0 0 auto;
+    min-height:42px;
+    padding-inline:12px;
   }
   .nav-cta{justify-content:center;text-align:center}
-  .hero{margin:14px 0 18px;border-radius:18px}
-  .hero-copy{padding:18px 16px}
+  .hero{
+    margin:10px 0 10px;
+    border-radius:16px;
+  }
+  .hero{display:none}
+  .hero-copy{padding:14px 14px 12px}
+  .eyebrow{
+    margin-bottom:8px;
+    padding:5px 9px;
+    font-size:.74rem;
+  }
+  .hero-copy h2{
+    font-size:1.6rem;
+    line-height:1.04;
+  }
+  .hero-copy p{
+    margin-top:8px;
+    font-size:.92rem;
+  }
+  .hero-actions{
+    margin-top:12px;
+    gap:8px;
+  }
+  .hero-actions .btn{
+    min-height:54px;
+    font-size:1rem;
+  }
+  .hero-actions .btn-alt{display:none}
   .hero-points,
   .trust-bar,
   .stat-grid,
@@ -597,22 +653,66 @@ footer a{color:#d8e1ec}
   .faq-grid{
     grid-template-columns:1fr;
   }
+  .hero-visual,
+  .trust-bar,
+  section[aria-labelledby="stats-title"],
+  #bundles .section-head p,
+  #bundles .bundle:not(.popular),
+  #bundles > .sub{
+    display:none;
+  }
+  .fab,
+  .sticky-cta{display:none}
+  #bundles{margin-top:14px}
+  #bundles .section-head{margin-bottom:10px}
+  #bundles .section-head h2{font-size:1.2rem}
+  #bundles .bundle{
+    padding:14px;
+    gap:8px;
+  }
+  #bundles .bundle ul{display:none}
+  #bundles .bundle .bundle-price{font-size:1.5rem}
+  .mobile-featured{
+    display:block;
+    margin:10px 0 10px;
+  }
+  .mobile-featured .section-head{display:none}
+  .mobile-featured .section-head p{max-width:34ch}
+  .mobile-featured .card{
+    padding:12px;
+    gap:6px;
+  }
+  .mobile-featured .card img{
+    max-height:120px;
+    object-fit:contain;
+  }
+  .mobile-featured .card h3{
+    font-size:1rem;
+    line-height:1.15;
+  }
+  .mobile-featured .card p:nth-of-type(n+2){display:none}
+  .mobile-featured .btn{
+    min-height:54px;
+    font-size:1rem;
+  }
   .hero-frame img{aspect-ratio:16/11}
   .video-card{min-height:200px}
   .btn,.btn-alt{width:100%}
   .table-wrap{padding:10px}
   th,td{padding:10px 8px;font-size:.94rem}
   footer{padding-bottom:112px}
-  .sticky-cta{display:flex}
+  .sticky-cta{display:none}
 }
 @media (max-width:420px){
-  .hero-copy h2{font-size:1.8rem}
+  .brand-copy h1{font-size:1.08rem}
+  .hero-copy h2{font-size:1.42rem}
   .hero-copy p,
   .trust-item span,
   .card p,
   .guide-card p,
   .support-card p,
   .faq-card p{font-size:.96rem}
+  .mobile-featured .card{padding:10px}
 }
 </style>
 </head>
@@ -651,8 +751,8 @@ footer a{color:#d8e1ec}
     <div class="hero-layout">
       <div class="hero-copy">
         <span class="eyebrow">DIY nickel plating without guesswork</span>
-        <h2 id="hero-title">Get a brighter nickel finish with kits, solutions, and supplies built for clean results.</h2>
-        <p>Shop bright nickel solution, acid copper prep materials, pure nickel anodes, and electroless nickel options for restoration work, custom fabrication, DIY plating, and professional shops that need larger quantities.</p>
+        <h2 id="hero-title">Get a brighter nickel finish without hunting through a full catalog.</h2>
+        <p>Start with our best-selling bright nickel solution and buy in one tap.</p>
         <ul class="hero-points">
           <li>Beginner-friendly nickel plating kit options</li>
           <li>Bright nickel solution for decorative results</li>
@@ -660,7 +760,7 @@ footer a{color:#d8e1ec}
           <li>Acid copper plating solution prep for stronger adhesion</li>
         </ul>
         <div class="hero-actions">
-          <a class="btn" href="#featured-products">Shop Best Sellers</a>
+          <a class="btn" href="https://account.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Buy Best Seller</a>
           <a class="btn-alt" href="beginner-plating-guide.html">Read the Beginner Guide</a>
         </div>
       </div>
@@ -673,6 +773,25 @@ footer a{color:#d8e1ec}
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="mobile-featured fade" aria-labelledby="mobile-featured-title">
+    <div class="section-head">
+      <div>
+        <h2 id="mobile-featured-title">Best Seller</h2>
+      </div>
+      <p>One fast path to buy from your phone.</p>
+    </div>
+    <article class="card">
+      <img src="https://i.postimg.cc/QNYfW4W5/20250521-022035.jpg" alt="Bright nickel solution gallon for mirror-bright decorative plating" width="400" height="300" loading="eager" decoding="async">
+      <span class="tag">Best Seller</span>
+      <h3>Bright Nickel Solution 1 Gallon</h3>
+      <p class="subhead">Pre-balanced bright nickel chemistry for a shinier finish with less trial and error.</p>
+      <div class="price">$70.00</div>
+      <div class="stripe-wrap">
+        <a class="btn" href="https://account.venmo.com/u/nickelplatingpro" target="_blank" rel="noopener">Buy Now with Venmo</a>
+      </div>
+    </article>
   </section>
 
   <section class="trust-bar fade" aria-label="Trust signals">
@@ -691,29 +810,6 @@ footer a{color:#d8e1ec}
     <div class="trust-item">
       <strong>DIY to production-scale support</strong>
       <span>Order small for testing or contact us for larger quantities for shop use.</span>
-    </div>
-  </section>
-
-  <section class="fade" aria-labelledby="stats-title">
-    <div class="section-head">
-      <div>
-        <h2 id="stats-title">Why Customers Choose NickelPlatingPro</h2>
-      </div>
-      <p>Find the right chemistry faster, compare kit tiers in one place, and choose from small-batch options or larger-quantity supply for shop work.</p>
-    </div>
-    <div class="stat-grid">
-      <article class="stat">
-        <strong>1 screen</strong>
-        <span>to reach the first buy button on mobile without scanning a dense catalog first.</span>
-      </article>
-      <article class="stat">
-        <strong>3 bundles</strong>
-        <span>to give shoppers a low, mid, and high spend path instead of only individual items.</span>
-      </article>
-      <article class="stat">
-        <strong>4 SEO guides</strong>
-        <span>that target nickel plating kit, DIY nickel plating, electroless kit, and acid copper intent.</span>
-      </article>
     </div>
   </section>
 
