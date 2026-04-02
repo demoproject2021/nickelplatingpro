@@ -37,6 +37,7 @@ body{
   font-family:"Manrope",system-ui,-apple-system,sans-serif;
   color:var(--ink);
   line-height:1.6;
+  overflow-x:hidden;
   background:
     radial-gradient(circle at top left, rgba(0,166,81,.14), transparent 28%),
     linear-gradient(180deg, #eef4f8 0%, #f7f9fc 260px, #f6f7f9 100%);
@@ -65,23 +66,29 @@ nav{
   width:min(92%,var(--max));
   margin:auto;
   display:flex;
+  flex-wrap:wrap;
   justify-content:space-between;
   gap:12px;
   padding:12px 0;
 }
 .nav-links{
   display:flex;
+  flex-wrap:wrap;
   gap:10px;
   overflow-x:auto;
   scrollbar-width:none;
 }
 .nav-links::-webkit-scrollbar{display:none}
 nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   color:#fff;
   padding:10px 14px;
   border-radius:999px;
   font-weight:800;
   white-space:nowrap;
+  text-align:center;
 }
 .nav-call{
   background:var(--primary);
@@ -167,7 +174,20 @@ footer a{color:#d8e1ec}
 }
 @media (max-width:760px){
   .container,.nav-wrap{width:min(94%,var(--max))}
-  .nav-wrap{display:grid}
+  .nav-wrap{
+    display:grid;
+    gap:10px;
+  }
+  .nav-links{
+    gap:8px;
+    overflow:visible;
+  }
+  nav a{
+    flex:1 1 calc(50% - 8px);
+    min-height:44px;
+  }
+  .nav-call{width:100%}
+  .btn,.btn-alt{width:100%}
   table{min-width:560px}
 }
 </style>
