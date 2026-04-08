@@ -412,6 +412,92 @@ main{
   margin:0;
   color:var(--ink-soft);
 }
+.industrial-banner{
+  margin:0 0 24px;
+  padding:0 16px 24px;
+}
+.industrial-shell{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
+  gap:24px;
+  align-items:center;
+  padding:28px;
+  border-radius:24px;
+  background:
+    linear-gradient(135deg, rgba(0,166,81,.12), rgba(255,255,255,.98)),
+    #fff;
+  border:1px solid rgba(0,166,81,.18);
+  box-shadow:var(--shadow);
+}
+.industrial-copy h2{
+  margin:0;
+  font-size:clamp(1.7rem, 1.25rem + 1.4vw, 2.5rem);
+}
+.industrial-copy p{
+  margin:14px 0 0;
+  color:var(--ink-soft);
+  max-width:58ch;
+}
+.industrial-points{
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:10px;
+}
+.industrial-points li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  color:var(--ink);
+  font-weight:700;
+}
+.industrial-points li::before{
+  content:"";
+  width:10px;
+  height:10px;
+  margin-top:.45em;
+  border-radius:999px;
+  flex:0 0 auto;
+  background:var(--primary);
+  box-shadow:0 0 0 5px rgba(0,166,81,.14);
+}
+.industrial-actions{
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.industrial-visual{
+  position:relative;
+}
+.industrial-visual img{
+  width:100%;
+  border-radius:20px;
+  border:1px solid rgba(32,48,69,.08);
+  box-shadow:0 14px 30px rgba(17,26,38,.12);
+}
+.industrial-note{
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:18px;
+  padding:14px 16px;
+  border-radius:16px;
+  background:rgba(16,21,27,.84);
+  color:#eef4fb;
+  backdrop-filter:blur(8px);
+}
+.industrial-note strong{
+  display:block;
+  font-size:1rem;
+}
+.industrial-note span{
+  display:block;
+  margin-top:4px;
+  color:#d5deec;
+  font-size:.95rem;
+}
 footer{
   background:#10151b;
   color:#afbac8;
@@ -489,6 +575,20 @@ footer a:hover{
   .hero-actions,
   .trust-links{
     flex-direction:column;
+  }
+  .industrial-banner{
+    padding-inline:0;
+  }
+  .industrial-shell{
+    grid-template-columns:1fr;
+    padding:22px 20px;
+  }
+  .industrial-actions{
+    flex-direction:column;
+  }
+  .industrial-note{
+    position:static;
+    margin-top:14px;
   }
 }
 </style>
@@ -621,6 +721,31 @@ footer a:hover{
         <h3>Is electroless better for complex parts?</h3>
         <p>Often yes. Electroless nickel can coat recesses and complicated shapes more evenly because it does not rely on current distribution.</p>
       </article>
+    </div>
+  </section>
+
+  <section class="industrial-banner" aria-labelledby="industrial-title">
+    <div class="industrial-shell">
+      <div class="industrial-copy">
+        <h2 id="industrial-title">Supplying industrial-grade nickel solutions for larger plating companies</h2>
+        <p>If you run a production line, job shop, or larger plating operation, we supply industrial-grade nickel solutions in both electroless and electroplating chemistries, with in-stock inventory ready to support larger-volume demand.</p>
+        <ul class="industrial-points">
+          <li>Electroless nickel and electroplating options for production-scale use</li>
+          <li>Larger-quantity support for repeat orders, line replenishment, and shop expansion</li>
+          <li>Direct contact for quotes, lead times, and solution matching for your process</li>
+        </ul>
+        <div class="industrial-actions">
+          <a class="btn" href="mailto:nickelplatingpro@outlook.com?subject=Industrial%20Nickel%20Solution%20Quote">Request an Industrial Quote</a>
+          <a class="btn-alt" href="products.html">View Available Solutions</a>
+        </div>
+      </div>
+      <div class="industrial-visual">
+        <img src="https://i.postimg.cc/9XwJtYCG/bucket-small.png" alt="Multiple buckets of nickel plating solution in stock for larger industrial orders" width="720" height="720" loading="lazy" decoding="async">
+        <div class="industrial-note">
+          <strong>In-stock supply for larger orders</strong>
+          <span>Built for plating shops that need dependable nickel chemistry availability.</span>
+        </div>
+      </div>
     </div>
   </section>
 </main>
