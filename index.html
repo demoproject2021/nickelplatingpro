@@ -16,6 +16,9 @@
 <meta name="theme-color" content="#00a651">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.postimg.cc" crossorigin>
+<link rel="dns-prefetch" href="https://i.postimg.cc">
+<link rel="preload" as="image" href="https://i.postimg.cc/76NQJksC/Screenshot-20251120-134306-Gallery.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
@@ -324,6 +327,12 @@ main{
 }
 .shop-shortcuts{
   padding-top:12px;
+}
+.shop-shortcuts,
+main > section:not(.hero),
+.industrial-banner{
+  content-visibility:auto;
+  contain-intrinsic-size:1px 700px;
 }
 .shortcut-shell{
   background:var(--surface);
@@ -639,7 +648,7 @@ footer a:hover{
       </div>
       <div class="hero-visual">
         <div class="hero-card">
-          <img src="https://i.postimg.cc/76NQJksC/Screenshot-20251120-134306-Gallery.jpg" alt="Nickel plating results showing a bright finish on plated metal parts" width="640" height="480" loading="eager" decoding="async">
+          <img src="https://i.postimg.cc/76NQJksC/Screenshot-20251120-134306-Gallery.jpg" alt="Nickel plating results showing a bright finish on plated metal parts" width="640" height="480" loading="eager" fetchpriority="high" decoding="async">
           <div class="hero-note">
             <strong>Start simple, then scale up.</strong>
             <p>Small kits, gallon chemistry, electroless options, and larger-quantity support all live in the full catalog instead of being stacked into the homepage.</p>
