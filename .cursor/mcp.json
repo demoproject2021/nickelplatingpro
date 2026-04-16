@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "gpdoc": {
+      "command": "node",
+      "args": [
+        "/home/cman/.vscode-oss/extensions/repetere.gpdoc-2.6.0-universal/out/mcp-server.js"
+      ]
+    }
+  }
+}
