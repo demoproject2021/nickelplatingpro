@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NickelPlatingPro Resources | Commercial Grade Nickel Plating Guides</title>
-<meta name="description" content="Learn commercial grade nickel plating, fix dull nickel plating, understand copper strike before nickel, and compare electroplating with electroless nickel.">
+<title>Technical Plating Resources | TDS & Nickel Plating Guides</title>
+<meta name="description" content="Technical data sheets, process guides, and plating knowledge base articles for industrial electroless nickel supplier buyers and production-scale plating solutions.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://nickelplatingpro.com/resources.html">
-<meta property="og:title" content="NickelPlatingPro Resources">
-<meta property="og:description" content="Guides, troubleshooting, and beginner-friendly help for nickel plating kits and solutions.">
+<meta property="og:title" content="NickelPlatingPro Technical Resources">
+<meta property="og:description" content="Technical data sheets, process guides, troubleshooting, and engineering-focused nickel plating resources.">
 <meta property="og:image" content="https://i.postimg.cc/k5YyNrbs/plated.webp">
 <meta property="og:url" content="https://nickelplatingpro.com/resources.html">
 <meta property="og:type" content="website">
@@ -176,6 +176,52 @@ th{background:var(--primary);color:#fff}
   gap:18px;
   grid-template-columns:repeat(4,minmax(0,1fr));
 }
+.tds-grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.tds-card{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.tds-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:auto;
+}
+.tds-meta span{
+  display:inline-flex;
+  align-items:center;
+  width:fit-content;
+  padding:5px 9px;
+  border:1px solid #c5e7d0;
+  border-radius:999px;
+  background:#eaf6ee;
+  color:#0f6639;
+  font-size:.78rem;
+  font-weight:800;
+}
+.kb-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 300px;
+  gap:18px;
+  align-items:start;
+}
+.kb-article{
+  display:grid;
+  gap:16px;
+}
+.kb-template{
+  margin:0;
+  padding-left:18px;
+  color:var(--ink-soft);
+}
+.kb-template li+li{
+  margin-top:6px;
+}
 .cta{
   margin-top:28px;
   padding:20px;
@@ -191,7 +237,7 @@ footer{
 }
 footer a{color:#d8e1ec}
 @media (max-width:860px){
-  .grid,.link-grid,.cta{grid-template-columns:1fr}
+  .grid,.link-grid,.tds-grid,.kb-layout,.cta{grid-template-columns:1fr}
 }
 @media (max-width:760px){
   .container,.nav-wrap{width:min(94%,var(--max))}
@@ -246,7 +292,7 @@ footer a{color:#d8e1ec}
 <main class="container">
   <section class="hero">
     <h2>Start with process clarity, then buy the right chemistry.</h2>
-    <p>Most bad finishes trace back to prep, current density, or part orientation. These guides help you troubleshoot problems faster whether you are plating at home or running repeat work in a professional shop.</p>
+    <p>Most bad finishes trace back to prep, current density, or part orientation. These technical resources help engineering, maintenance, and purchasing teams compare industrial electroless nickel supplier options, nickel electroplating chemistry, and production-scale plating solutions.</p>
   </section>
 
   <section>
@@ -309,6 +355,86 @@ footer a{color:#d8e1ec}
         <p>Steel-specific prep, adhesion, strike options, and kit selection for restoration and shop work.</p>
         <a class="btn-alt" href="nickel-plating-for-steel/">Open page</a>
       </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="tds-title">
+    <div class="section-head">
+      <h2 id="tds-title">Technical Data Sheets (TDS)</h2>
+      <p>Download product documentation and process guides before quoting, testing, or scaling a nickel plating bath.</p>
+    </div>
+    <div class="tds-grid">
+      <article class="card tds-card">
+        <h3>Advanced Nickel Plating Guide</h3>
+        <p>Process reference for bath setup, cleaning, plating variables, and troubleshooting for controlled nickel work.</p>
+        <div class="tds-meta"><span>PDF</span><span>Process Guide</span></div>
+        <a class="btn-alt" href="assets/adv-guide.pdf" download>Download PDF</a>
+      </article>
+      <article class="card tds-card">
+        <h3>Electroless Nickel Process Guide</h3>
+        <p>Buyer checklist for uniform nickel on complex geometry, recessed areas, and production-scale plating solutions.</p>
+        <div class="tds-meta"><span>Guide</span><span>Electroless</span></div>
+        <a class="btn-alt" href="electroless-nickel-kit/">Open guide</a>
+      </article>
+      <article class="card tds-card">
+        <h3>Nickel Bath Chemistry Notes</h3>
+        <p>Reference page for nickel chloride role, anode behavior, bath support, and troubleshooting decisions.</p>
+        <div class="tds-meta"><span>Guide</span><span>Bath Chemistry</span></div>
+        <a class="btn-alt" href="nickel-chloride-solution/">Open guide</a>
+      </article>
+      <article class="card tds-card">
+        <h3>Steel Surface Preparation</h3>
+        <p>Preparation sequence for steel parts where adhesion, activation, and immediate transfer matter.</p>
+        <div class="tds-meta"><span>Guide</span><span>Prep</span></div>
+        <a class="btn-alt" href="nickel-plating-for-steel/">Open guide</a>
+      </article>
+      <article class="card tds-card">
+        <h3>Adhesion Strike Workflow</h3>
+        <p>When to add a nickel strike step before the main bath for difficult or high-risk surfaces.</p>
+        <div class="tds-meta"><span>Guide</span><span>Adhesion</span></div>
+        <a class="btn-alt" href="nickel-strike-solution/">Open guide</a>
+      </article>
+      <article class="card tds-card">
+        <h3>Production Quote Intake</h3>
+        <p>Send part size, base metal, bath volume, finish goal, industry type, and estimated volume for qualified sourcing support.</p>
+        <div class="tds-meta"><span>Quote</span><span>B2B</span></div>
+        <a class="btn-alt" href="mailto:nickelplatingpro@outlook.com?subject=Production%20Plating%20Quote%20Request">Request quote</a>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="knowledge-title">
+    <div class="section-head">
+      <h2 id="knowledge-title">Plating Knowledge Base</h2>
+      <p>Article templates for engineering buyers who need repeatable process guidance before ordering chemistry.</p>
+    </div>
+    <div class="kb-layout">
+      <div class="kb-article">
+        <article class="card">
+          <h3>Solution Maintenance</h3>
+          <p>Use this article format to explain bath life, contamination control, filtration, anode condition, brightener additions, pH checks, temperature control, and documentation for repeat production work.</p>
+          <ul class="kb-template">
+            <li>Problem statement: what changes when the solution drifts out of range.</li>
+            <li>Inspection steps: visual checks, deposit symptoms, bath handling, and part history.</li>
+            <li>Corrective actions: cleaning, filtering, replenishing, replacing, or escalating to support.</li>
+            <li>Buyer note: when a larger bath volume or dedicated production supply makes sense.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Surface Preparation</h3>
+          <p>Use this article format to help engineers and shop leads connect base-metal condition to adhesion, brightness, corrosion resistance, and production consistency.</p>
+          <ul class="kb-template">
+            <li>Base metal: steel, copper, brass, mixed repairs, or previously plated parts.</li>
+            <li>Prep sequence: degrease, abrade or polish, activate, rinse, and transfer quickly.</li>
+            <li>Failure modes: peeling, blistering, dull deposits, burnt edges, and poor recess coverage.</li>
+            <li>Process decision: standard nickel, nickel strike, copper strike, or electroless nickel.</li>
+          </ul>
+        </article>
+      </div>
+      <aside class="card">
+        <h3>Article Template</h3>
+        <p>Each knowledge-base article should use a clear H1, a short engineering summary, an application table, step-by-step process notes, common failure modes, safety and disposal reminders, and a quote CTA for production requirements.</p>
+      </aside>
     </div>
   </section>
 
